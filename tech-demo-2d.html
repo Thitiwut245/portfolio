@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Demo 2D - Project Details</title>
+    <meta name="description" content="Details about the Tech Demo 2D project">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" data-i18n="nav.name">Thitiwut Sriamonrat</a>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="index.html#about" class="nav-link" data-i18n="nav.about">About Me</a></li>
+                    <li><a href="index.html#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="resume.pdf" class="nav-link" target="_blank" style="color: var(--primary-color);"
+                            data-i18n="nav.resume">Resume</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                        <!-- Sun Icon -->
+                        <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor"
+                                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 2c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                            <path fill="currentColor"
+                                d="M9.37 5.51c-.18.64-.27 1.31-.27 1.99 0 4.08 3.32 7.4 7.4 7.4.68 0 1.35-.09 1.99-.27C17.45 17.19 14.93 19 12 19c-3.86 0-7-3.14-7-7 0-2.93 1.81-5.45 4.37-6.49zM12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+                        </svg>
+                    </button>
+                    <!-- No language toggle here -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero -->
+        <header class="project-hero">
+            <!-- Placeholder Image -->
+            <div style="width: 100%; height: 100%; background: #333; position: absolute; top: 0; left: 0; z-index: -1;">
+            </div>
+            <div class="project-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="arrow-right"
+                        style="width: 10px; height: 1px; background: rgba(255,255,255,0.7);"></span>
+                    <span>Tech Demo 2D</span>
+                </div>
+                <h1>Tech Demo 2D</h1>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">An ongoing 2D technical
+                    demonstration.</p>
+            </div>
+        </header>
+
+        <!-- Project Content -->
+        <section class="project-content-section">
+            <div class="container project-info-grid">
+
+                <!-- Main Content -->
+                <div class="main-column">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Tech Demo 2D is an ongoing 2D gameplay systems project developed in Unity. This project was
+                        created after transitioning from GDScript and Godot, with the primary goal of building
+                        practical understanding of Unity’s gameplay systems and C#-based development workflow.
+
+                        The project functions as a technical sandbox for implementing and iterating on core gameplay
+                        systems such as player movement, combat logic, enemy behavior, and UI interaction. Emphasis is
+                        placed on clean architecture, modular system design, and iterative improvement rather than
+                        narrative or content completeness.
+
+                        New systems are added, tested, and refined continuously as the project evolves.
+                    </p>
+
+                    <h3 style="margin-top: 2rem;">Details & Responsibilities</h3>
+                    <div class="responsibilities-container">
+
+                        <!-- Gameplay Systems -->
+                        <div class="responsibility-card">
+                            <h4>Gameplay Systems</h4>
+                            <p>Implemented core 2D gameplay mechanics, including player movement, jumping, aiming, and
+                                responsive input handling.</p>
+
+                            <div class="responsibility-media">
+                                <video src="assets/TechD2D/TechDemo2DMovement.mp4" autoplay muted loop
+                                    playsinline></video>
+                            </div>
+
+                            <h5
+                                style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem; color: var(--text-main);">
+                                Core Mechanics</h5>
+                            <ul
+                                style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 0.95rem; color: var(--text-muted);">
+                                <li style="margin-bottom: 0.25rem;"><strong>Physics-Based Movement</strong>: Smooth
+                                    acceleration and deceleration for character movement
+                                    (<code>PlayerMovement2D.cs</code>).</li>
+                                <li style="margin-bottom: 0.25rem;"><strong>Advanced Jumping</strong>: Features coyote
+                                    time, jump buffering, and variable jump height for responsive platforming.</li>
+                                <li style="margin-bottom: 0.25rem;"><strong>Aiming & Combat</strong>: Support for mouse
+                                    aiming and directional facing, allowing for precise weapon control
+                                    (<code>Shotgun.cs</code>).</li>
+                                <li style="margin-bottom: 0.25rem;"><strong>Input System</strong>: Decoupled input
+                                    handling using <code>PlayerInputReader.cs</code> to manage control schemes
+                                    efficiently.</li>
+                            </ul>
+
+                            <h5
+                                style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem; color: var(--text-main);">
+                                Implementation Details</h5>
+
+                            <p style="font-size: 0.9rem; font-weight: 600; margin-top: 0.5rem;">Horizontal Movement</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Smooth
+                                acceleration and deceleration using custom friction logic:</p>
+                            <div class="code-snippet">
+                                private void HandleHorizontalMovement()
+                                {
+                                float targetSpeed = input.HorizontalInput * moveSpeed;
+                                float currentSpeed = rb.linearVelocity.x;
+
+                                float speedDifference = targetSpeed - currentSpeed;
+
+                                float accelRate = decel;
+                                if (Mathf.Abs(targetSpeed) > 0.01f)
+                                {
+                                accelRate = accel;
+                                }
+
+                                float movement = speedDifference * accelRate * Time.fixedDeltaTime;
+
+                                rb.linearVelocity = new Vector2(currentSpeed + movement, rb.linearVelocity.y);
+                                }
+                            </div>
+
+                            <p style="font-size: 0.9rem; font-weight: 600; margin-top: 1rem;">Responsive Jumping</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Uses a jump
+                                buffer and coyote time for better game feel:</p>
+                            <div class="code-snippet">
+                                private void JumpCheck()
+                                {
+                                // check if we can jump
+                                if (jumpBufferCounter > 0f)
+                                {
+                                if (coyoteCounter > 0f)
+                                {
+                                Debug.Log("Jump!");
+                                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                                jumpBufferCounter = 0f;
+                                coyoteCounter = 0f;
+                                }
+                                }
+                                }
+                            </div>
+
+                            <p style="font-size: 0.9rem; font-weight: 600; margin-top: 1rem;">Variable Jump Height &
+                                Gravity</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Applies
+                                different gravity multipliers for falling and "low jumps" (releasing space early):</p>
+                            <div class="code-snippet">
+                                private void ApplyGravity()
+                                {
+                                if (rb.linearVelocity.y &lt; 0f)
+                                {
+                                // Falling
+                                rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1f) *
+                                Time.fixedDeltaTime;
+                                }
+                                else if (rb.linearVelocity.y &gt; 0f && !input.JumpHeld)
+                                {
+                                // Rising but jump not held
+                                rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1f) *
+                                Time.fixedDeltaTime;
+                                }
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Combat & Weapon Logic -->
+                        <div class="responsibility-card">
+                            <h4>Combat & Weapon Logic</h4>
+                            <p>Designed and implemented a shotgun-based combat system, covering firing behavior, hit
+                                detection, damage processing, ammo-type switching, shell ejection, and combat feedback
+                                effects.</p>
+                            <div class="responsibility-media">
+                                <video src="assets/TechD2D/TechDemo2DCombat.mp4" autoplay muted loop
+                                    playsinline></video>
+                            </div>
+                            <div class="code-snippet">
+                                // Example: Shotgun Spread Logic
+                                void FireShotgun()
+                                {
+                                for (int i = 0; i &lt; pelletCount; i++)
+                                {
+                                float spreadAngle = Random.Range(-spread, spread);
+                                Quaternion rotation = Quaternion.Euler(0, 0, spreadAngle);
+                                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation *
+                                rotation);
+                                }
+                                // Handle Recoil & Effects
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Enemy Behavior -->
+                        <div class="responsibility-card">
+                            <h4>Enemy Behavior</h4>
+                            <p>Developed frog-zombie enemy behavior, including basic state handling, movement
+                                patterns,
+                                attack responses, and damage reception.</p>
+                            <div class="responsibility-media">
+                                <video src="assets/TechD2D/TechDemoAIEnemy.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="code-snippet">
+                                // Example: Simple State Machine
+                                switch (currentState) {
+                                case EnemyState.Idle:
+                                ScanForPlayer();
+                                break;
+                                case EnemyState.Chase:
+                                MoveTowardsPlayer();
+                                break;
+                                case EnemyState.Attack:
+                                PerformJumpAttack();
+                                break;
+                                }
+                            </div>
+                        </div>
+
+                        <!-- UI & Player Feedback -->
+                        <div class="responsibility-card">
+                            <h4>UI & Player Feedback</h4>
+                            <p>Implemented gameplay UI elements such as health indicators, ammunition feedback, and
+                                interaction cues to improve player clarity.</p>
+                            <div class="responsibility-media">
+                                <video src="assets/TechD2D/TechDemoUI.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="code-snippet">
+                                // Example: UI Event Subscription
+                                void OnEnable() {
+                                PlayerHealth.OnHealthChanged += UpdateHealthBar;
+                                }
+
+                                void UpdateHealthBar(float currentHealth, float maxHealth) {
+                                healthBarFill.fillAmount = currentHealth / maxHealth;
+                                }
+                            </div>
+                        </div>
+
+                        <!-- System Architecture -->
+                        <div class="responsibility-card">
+                            <h4>System Architecture</h4>
+                            <p>This diagram was created to illustrate the overall structural organization of the game’s
+                                main systems and their high-level relationships, including player, combat, UI, and
+                                shared core services.</p>
+                            <div class="responsibility-media">
+                                <img src="assets/TechD2D/TechDemoMermaidDiagram.png" alt="TechDemoMermaidDiagram">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <h3>Project Info</h3>
+                    <ul class="meta-list">
+                        <li>
+                            <span class="meta-label">Role</span>
+                            <span class="meta-value">Gameplay Programmer</span>
+                        </li>
+                        <li>
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">Ongoing</span>
+                        </li>
+                    </ul>
+
+                    <h3>Tech Stack</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Unity</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="#" class="btn" style="text-align: center;">View Repository</a>
+                        <a href="index.html" class="btn-text"
+                            style="display:block; text-align:center; margin-top:0.5rem;">&larr; Back to
+                            Projects</a>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; opacity: 0.7; padding: 2rem 0;">&copy; 2024 Thitiwut Sriamonrat</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
