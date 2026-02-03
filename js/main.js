@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             projects: {
                 title: "Featured Projects",
+                playDemo: "Play Demo",
                 viewDetails: "View Details ",
                 nurse: {
                     b1: "Educational Simulation: Scenario-based interaction for nursing students.",
@@ -164,14 +165,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     b2: "Systems: AI detection, stealth mechanics, QTE combat, and health systems.",
                     b3: "Created original characters hand-drawn assets.",
                     b4: "Logic: Signal-driven logic for modular gameplay & environmental interaction.",
-                    awardTitle: "NSC 2025 2nd Place (Esan Region)",
-                    awardBadge: "NSC 2025 2nd Place (Esan) Certificate"
+                    awardTitle: "NSC 2025 2nd Place",
+                    awardBadge: "NSC 2025 2nd Place Certificate"
                 },
                 tech2d: {
-                    desc: "An ongoing 2D technical demonstration exploring various mechanics."
+                    desc: "An ongoing 2D Unity gameplay sandbox for experimenting with core mechanics such as player movement, combat systems, and enemy behavior. The project focuses on modular system design, responsiveness, and iterative gameplay development rather than content completion."
                 },
                 tech3d: {
-                    desc: "An ongoing 3D technical demonstration exploring advanced systems."
+                    desc: "An ongoing 3D Unity technical sandbox for experimenting with gameplay and movement systems using physics. This project is used to prototype and test ideas such as procedural movement, Rigidbody-based control, and early combat or interaction mechanics. The focus is on building and iterating on complex gameplay systems with clean, modular code, prioritizing technical exploration and learning over polished visuals or finished content."
                 }
             },
             contact: {
@@ -205,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             projects: {
                 title: "ผลงาน",
+                playDemo: "เล่น Demo",
                 viewDetails: "ดูรายละเอียด",
                 nurse: {
                     b1: "Educational Simulation: จำลองสถานการณ์เพื่อการเรียนรู้สำหรับนักศึกษาพยาบาล",
@@ -216,14 +218,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     b2: "Systems: ระบบตรวจจับ AI, กลไกการลอบเร้น, การต่อสู้แบบ QTE, และระบบพลังชีวิต",
                     b3: "Assets: Characters Assets วาดด้วยมือเองทั้งหมด",
                     b4: "ระบบตรรกะ: ใช้ระบบ Signal-driven สำหรับการโต้ตอบกับสภาพแวดล้อม",
-                    awardTitle: "รองชนะเลิศอันดับ 2 NSC 2025 (ภาคอีสาน)",
-                    awardBadge: "เกียรติบัตร รองชนะเลิศอันดับ 2 NSC 2025 (ภาคอีสาน)"
+                    awardTitle: "รองชนะเลิศอันดับ 2 NSC 2025",
+                    awardBadge: "เกียรติบัตร รองชนะเลิศอันดับ 2 NSC 2025"
                 },
                 tech2d: {
-                    desc: "โครงการสาธิตทางเทคนิค 2D ที่กำลังพัฒนาเพื่อศึกษาและทดลองกลไกเกมต่างๆ"
+                    desc: "โครงการ Sandbox ทดลองระบบเกมเพลย์ 2D ใน Unity เพื่อศึกษาและทดสอบกลไกหลักต่างๆ เช่น การเคลื่อนที่ของผู้เล่น ระบบการต่อสู้ และพฤติกรรมของศัตรู โปรเจกต์นี้เน้นการออกแบบระบบที่เป็นโมดูล ความตอบสนองที่รวดเร็ว และการพัฒนาเกมเพลย์แบบวนซ้ำมากกว่าการสร้างคอนเทนต์ให้สมบูรณ์"
                 },
                 tech3d: {
-                    desc: "โครงการสาธิตทางเทคนิค 3D ที่กำลังพัฒนาเพื่อศึกษาระบบขั้นสูง"
+                    desc: "โปรเจกต์นี้ถูกใช้เป็นพื้นที่ทดลองสำหรับพัฒนาระบบเกมเพลย์และการเคลื่อนไหวโดยอาศัยฟิสิกส์ เช่น การควบคุมตัวละครด้วย Rigidbody การเคลื่อนไหวแบบ procedural และการทดลองระบบการต่อสู้หรือการโต้ตอบเบื้องต้น จุดประสงค์หลักคือการสร้างและทดสอบระบบเกมที่มีความซับซ้อน เน้นโครงสร้างโค้ดที่เป็นระเบียบ การปรับปรุงซ้ำอย่างต่อเนื่อง และความเข้าใจเชิงเทคนิค มากกว่าการทำเกมให้สมบูรณ์ด้านกราฟิกหรือเนื้อหา"
                 }
             },
             contact: {
@@ -258,6 +260,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLang = langToggle.textContent.toLowerCase();
             const newLang = currentLang === 'en' ? 'th' : 'en';
             updateLanguage(newLang);
+        });
+    }
+
+    // Download Button Loading State
+    const downloadBtn = document.getElementById('download-demo-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+            if (downloadBtn.classList.contains('loading')) return;
+
+            // Show alert
+            alert("Download started! It will take a while (84MB), please don't press it again.");
+
+            // Add loading class
+            downloadBtn.classList.add('loading');
+
+            // Optional: Store original text if we wanted to revert, but for now we just disable.
+            // We can append "Downloading..." text or just let the spinner show.
+            // The spinner is added via CSS ::after, so text remains legible.
+
+            // Re-enable after 10 seconds just in case (optional, but good UX if download fails to start or is quick)
+            setTimeout(() => {
+                downloadBtn.classList.remove('loading');
+            }, 10000);
         });
     }
 });

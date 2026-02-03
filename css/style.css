@@ -986,6 +986,38 @@ p.lead {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+.btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+    position: relative;
+    padding-left: 2.5rem;
+    /* Make room for spinner */
+}
+
+.btn.loading::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: button-spin 1s linear infinite;
+}
+
+@keyframes button-spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(224, 159, 62, 0.6);

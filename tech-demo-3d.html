@@ -71,25 +71,24 @@
                     <p>
                         <em>
                             This project is ongoing; the features presented here represent the current stage of
-                            development,
-                            with additional mechanics and refinements planned.
+                            development.
                         </em>
                     </p>
                     <p>
-                        <strong>IRONQUAD Tech Demo3D</strong> is a Unity technical sandbox exploring a
-                        <strong>procedural quadruped mech</strong>
-                        powered by <strong>Rigidbody-based locomotion</strong> and <strong>procedural inverse
-                            kinematics</strong>, rather than
-                        animation clips. The focus is grounded movement, gait control, and stable foot placement using
-                        raycasts and a
-                        procedural leg rig.
+                        IRONQUAD Tech Demo 3D is a Unity technical prototype focused on experimenting with procedural
+                        movement for a quadruped mech. Instead of using traditional animation clips, the mech moves
+                        using physics-based Rigidbody locomotion combined with procedural inverse kinematics.
                     </p>
                     <p>
-                        The core loop is: the body moves via physics, each leg computes an “ideal” foot target by
-                        raycasting against the
-                        terrain, and the system triggers a step when the current foot position drifts beyond a
-                        threshold—moving the foot
-                        along a smooth arc for mechanically grounded motion.
+                        The main goal of this project is to explore grounded movement, natural leg stepping, and stable
+                        foot placement on uneven terrain. Each leg continuously uses raycasts to find the ground and
+                        determine where it should step next.
+                    </p>
+                    <p>
+                        At a high level, the system works as follows: the mech’s body moves using physics, each leg
+                        calculates its ideal foot position based on the terrain, and when a foot moves too far from its
+                        target, the system triggers a step. The leg then moves along a smooth arc to the new position,
+                        creating movement that feels heavy, mechanical, and grounded.
                     </p>
 
                     <h3 style="margin-top: 2rem;">Details & Responsibilities</h3>
@@ -238,6 +237,9 @@
                     </div>
 
                     <div class="action-buttons">
+                        <a href="https://thitiwut245.github.io/IRONQUAD_TechDemo3D/" target="_blank" class="btn"
+                            style="text-align: center; margin-bottom: 0.5rem;" data-i18n="projects.playDemo">Play
+                            Demo</a>
                         <a href="#" class="btn" style="text-align: center;">View Repository</a>
                         <a href="index.html" class="btn-text"
                             style="display:block; text-align:center; margin-top:0.5rem;">&larr; Back to Projects</a>
