@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "An ongoing 2D Unity gameplay sandbox for experimenting with core mechanics such as player movement, combat systems, and enemy behavior. The project focuses on modular system design, responsiveness, and iterative gameplay development rather than content completion."
                 },
                 tech3d: {
-                    desc: "An ongoing 3D Unity technical sandbox for experimenting with gameplay and movement systems using physics. This project is used to prototype and test ideas such as procedural movement, Rigidbody-based control, and early combat or interaction mechanics. The focus is on building and iterating on complex gameplay systems with clean, modular code, prioritizing technical exploration and learning over polished visuals or finished content."
+                    desc: "An ongoing 3D Unity technical sandbox for experimenting with gameplay and movement systems. This project is used to prototype and test ideas such as procedural movement, Rigidbody-based control. The focus is on building on complex gameplay systems with clean, modular code, prioritizing technical exploration and learning over polished visuals or finished content."
                 }
             },
             contact: {
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     desc: "โครงการ Sandbox ทดลองระบบเกมเพลย์ 2D ใน Unity เพื่อศึกษาและทดสอบกลไกหลักต่างๆ เช่น การเคลื่อนที่ของผู้เล่น ระบบการต่อสู้ และพฤติกรรมของศัตรู โปรเจกต์นี้เน้นการออกแบบระบบที่เป็นโมดูล ความตอบสนองที่รวดเร็ว และการพัฒนาเกมเพลย์แบบวนซ้ำมากกว่าการสร้างคอนเทนต์ให้สมบูรณ์"
                 },
                 tech3d: {
-                    desc: "โปรเจกต์นี้ถูกใช้เป็นพื้นที่ทดลองสำหรับพัฒนาระบบเกมเพลย์และการเคลื่อนไหวโดยอาศัยฟิสิกส์ เช่น การควบคุมตัวละครด้วย Rigidbody การเคลื่อนไหวแบบ procedural และการทดลองระบบการต่อสู้หรือการโต้ตอบเบื้องต้น จุดประสงค์หลักคือการสร้างและทดสอบระบบเกมที่มีความซับซ้อน เน้นโครงสร้างโค้ดที่เป็นระเบียบ การปรับปรุงซ้ำอย่างต่อเนื่อง และความเข้าใจเชิงเทคนิค มากกว่าการทำเกมให้สมบูรณ์ด้านกราฟิกหรือเนื้อหา"
+                    desc: "โปรเจกต์นี้ถูกใช้เป็นพื้นที่ทดลองสำหรับพัฒนาระบบเกมเพลย์และการเคลื่อนไหวโดยอาศัยฟิสิกส์ เช่น การควบคุมตัวละครด้วย Rigidbody การเคลื่อนไหวแบบ procedural เบื้องต้น จุดประสงค์หลักคือการสร้างและทดสอบระบบเกมที่มีความซับซ้อน เน้นโครงสร้างโค้ดที่เป็นระเบียบ และความเข้าใจเชิงเทคนิค มากกว่าเป็นเกมที่สมบูรณ์ด้านกราฟิกหรือเนื้อหา"
                 }
             },
             contact: {
