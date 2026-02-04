@@ -50,7 +50,7 @@
                     <div class="hero-content fade-in">
                         <h1 data-i18n="hero.role">Gameplay Programmer.</h1>
                         <p class="lead" data-i18n="hero.desc">Interested in gameplay programming and development.
-                            Always ready to learn and contribute in a gameplay programming environment.</p>
+                            Always ready to learn and contribute in a game development environment.</p>
                         <a href="assets/Resume.pdf" class="btn" data-i18n="hero.downloadResume" target="_blank">Download
                             Resume</a>
                     </div>
@@ -144,7 +144,7 @@
         <!-- Featured Projects -->
         <section id="projects">
             <div class="container fade-in">
-                <h2 data-i18n="projects.title">Featured Projects</h2>
+                <h2 data-i18n="projects.title">Projects</h2>
                 <div class="projects-grid">
 
                     <!-- Project 1 -->
@@ -161,13 +161,16 @@
                             </div>
 
                             <h3>Nurse Learning Platform</h3>
+                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
+                                A serious-game simulation for training nursing students in clinical protocols.
+                            </p>
                             <ul class="project-bullets">
-                                <li data-i18n="projects.nurse.b1"><strong>Educational Simulation:</strong>
-                                    Scenario-based interaction for nursing students.</li>
-                                <li data-i18n="projects.nurse.b2"><strong>Gameplay Logic:</strong> Implemented
-                                    interaction logic & state-driven systems.</li>
-                                <li data-i18n="projects.nurse.b3"><strong>Tech:</strong> Developed in Unity with C#.
-                                </li>
+                                <li data-i18n="projects.nurse.b1"><strong>Scenario FSM:</strong> Finite State Machine
+                                    validates player actions against strict medical steps.</li>
+                                <li data-i18n="projects.nurse.b2"><strong>Interaction System:</strong> Context-aware
+                                    system for manipulating tools and patient avatars.</li>
+                                <li data-i18n="projects.nurse.b3"><strong>Tech:</strong> Unity (C#), ScriptableObjects
+                                    for data-driven design.</li>
                             </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">C#</span>
@@ -195,18 +198,19 @@
                                 style="display: inline-block; background: #e09f3e; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; text-decoration: none; transition: transform 0.2s;"
                                 onmouseover="this.style.transform='scale(1.05)'"
                                 onmouseout="this.style.transform='scale(1)'" data-i18n="projects.soa.awardBadge">
-                                NSC 2025 2nd Place Certificate
+                                NSC 2025 National Round Funded Project Certificate
                             </a>
                             <h3>Shadow of Ayutthaya</h3>
+                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
+                                A 2D stealth-action game aimed at high-stakes avoidance and timing.
+                            </p>
                             <ul class="project-bullets">
-                                <li data-i18n="projects.soa.b1"><strong>Stealth-Action:</strong> 2D game developed in
-                                    Godot 4.</li>
-                                <li data-i18n="projects.soa.b2"><strong>Systems:</strong> AI detection, stealth
-                                    mechanics, QTE combat, and health systems.</li>
-                                <li data-i18n="projects.soa.b3"><strong>Assets:</strong> Created original hand-drawn
-                                    assets.</li>
-                                <li data-i18n="projects.soa.b4"><strong>Logic:</strong> Signal-driven logic for modular
-                                    gameplay & environmental interaction.</li>
+                                <li data-i18n="projects.soa.b1"><strong>Stealth AI:</strong> Modular state machine
+                                    (Idle/Suspicious/Alert) driven by sensory data.</li>
+                                <li data-i18n="projects.soa.b2"><strong>Perception:</strong> 2D raycasting and Area2D
+                                    triggers for dynamic enemy vision.</li>
+                                <li data-i18n="projects.soa.b3"><strong>Architecture:</strong> Signal-driven logic
+                                    decoupling combat, UI, and audio.</li>
                             </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">GDScript</span>
@@ -232,12 +236,23 @@
                             </div>
                         </div>
                         <div class="card-content">
+                            <div class="card-meta-row">
+                                <span class="meta-item"><strong>Team:</strong> Solo</span>
+                                <span class="meta-item"><strong>Engine:</strong> Unity</span>
+                                <span class="meta-item"><strong>Role:</strong> Gameplay Programmer</span>
+                            </div>
                             <h3>Tech Demo 2D</h3>
-                            <p class="role-text">Role: Gameplay Programmer</p>
-                            <p data-i18n="projects.tech2d.desc">An ongoing 2D Unity gameplay sandbox for experimenting
-                                with core mechanics such as player movement, combat systems, and enemy behavior. The
-                                project focuses on modular system design, responsiveness, and iterative gameplay
-                                development rather than content completion.</p>
+                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
+                                A Unity sandbox for prototyping and refining 2D platformer physics and combat mechanics.
+                            </p>
+                            <ul class="project-bullets">
+                                <li data-i18n="projects.tech2d.b1"><strong>Physics Controller:</strong> Custom friction,
+                                    coyote time, and jump buffering (`PlayerMovement2D.cs`).</li>
+                                <li data-i18n="projects.tech2d.b2"><strong>Modular Logic:</strong> Tunable acceleration
+                                    parameters to simulate weight/inertia.</li>
+                                <li data-i18n="projects.tech2d.b3"><strong>Combat:</strong> Shotgun logic with
+                                    procedural spread and decoupled input readers.</li>
+                            </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">C#</span>
                                 <span class="tech-tag">Unity</span>
@@ -260,16 +275,24 @@
                             </div>
                         </div>
                         <div class="card-content">
+                            <div class="card-meta-row">
+                                <span class="meta-item"><strong>Team:</strong> Solo</span>
+                                <span class="meta-item"><strong>Engine:</strong> Unity</span>
+                                <span class="meta-item"><strong>Role:</strong> Gameplay Programmer</span>
+                            </div>
                             <h3>Tech Demo 3D</h3>
-                            <p class="role-text">Role: Gameplay Programmer</p>
-                            <p data-i18n="projects.tech3d.desc">An ongoing 3D Unity technical sandbox for experimenting
-                                with gameplay and movement systems using physics.
-
-                                This project is used to prototype and test ideas such as procedural movement,
-                                Rigidbody-based control, and early combat or interaction mechanics. The focus is on
-                                building and iterating on complex gameplay systems with clean, modular code,
-                                prioritizing technical exploration and learning over polished visuals or finished
-                                content.</p>
+                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
+                                A technical prototype exploring procedural locomotion and grounding for a quadruped
+                                mech.
+                            </p>
+                            <ul class="project-bullets">
+                                <li data-i18n="projects.tech3d.b1"><strong>Procedural Legs:</strong> Step-target logic
+                                    calculating ideal foot positions from velocity.</li>
+                                <li data-i18n="projects.tech3d.b2"><strong>Grounding:</strong> Raycast-based body
+                                    orientation adapting to uneven terrain.</li>
+                                <li data-i18n="projects.tech3d.b3"><strong>Math & Easing:</strong> `Mathf.SmoothStep`
+                                    for naturalistic, weight-simulated step arcs.</li>
+                            </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">C#</span>
                                 <span class="tech-tag">Unity</span>
@@ -293,46 +316,48 @@
         <section id="contact">
             <div class="container fade-in">
                 <div class="contact-container" style="text-align: center; max-width: 600px; margin: 0 auto;">
-                    <h2 data-i18n="contact.title">Let's Make Something Sweet</h2>
-                    <p class="lead" style="margin-bottom: 2rem;" data-i18n="contact.desc">Feel free to reach out on any
+                    <h2 data-i18n="contact.title">Contact</h2>
+                    <p class="lead" style="margin-bottom: 2rem;">Feel free to reach out on any
                         platform!</p>
 
                     <div class="contact-links">
                         <!-- Email -->
-                        <a href="mailto:hello@example.com" class="contact-icon-link" aria-label="Email">
+                        <a href="mailto:thitiwut.si@kkumail.com" class="contact-icon-link" aria-label="Email">
                             <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
                                 <path
                                     d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
-                            <span>Email</span>
+                            <span>Email : thitiwut.si@kkumail.com</span>
                         </a>
 
                         <!-- GitHub -->
-                        <a href="https://github.com/yourusername" target="_blank" class="contact-icon-link"
+                        <a href="https://github.com/Thitiwut245" target="_blank" class="contact-icon-link"
                             aria-label="GitHub">
                             <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
-                            <span>GitHub</span>
+                            <span>GitHub : Thitiwut245</span>
                         </a>
 
                         <!-- Facebook -->
-                        <a href="#" target="_blank" class="contact-icon-link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/thitiwut.sri.amonrat/" target="_blank"
+                            class="contact-icon-link" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
-                            <span>Facebook</span>
+                            <span>Facebook : Thitiwut Sriamonrat</span>
                         </a>
 
                         <!-- Instagram -->
-                        <a href="#" target="_blank" class="contact-icon-link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/gust_sub0/" target="_blank" class="contact-icon-link"
+                            aria-label="Instagram">
                             <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
-                            <span>Instagram</span>
+                            <span>Instagram : gust_sub0</span>
                         </a>
                     </div>
                 </div>

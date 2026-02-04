@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             hero: {
                 role: "Gameplay Programmer.",
-                desc: "Interested in gameplay programming and development. Always ready to learn and contribute in a gameplay programming environment.",
+                desc: "Interested in gameplay programming and development. Always ready to learn and contribute in a game development environment.",
                 downloadResume: "Download Resume",
 
             },
@@ -152,27 +152,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 downloadCert: "Download Certificate"
             },
             projects: {
-                title: "Featured Projects",
+                title: "Projects",
                 playDemo: "Play Demo",
                 viewDetails: "View Details ",
                 nurse: {
-                    b1: "Educational Simulation: Scenario-based interaction for nursing students.",
-                    b2: "Gameplay Logic: Implemented interaction logic & state-driven systems.",
-                    b3: "Tech: Developed in Unity with C#."
+                    b1: "Scenario FSM: Finite State Machine validates player actions against strict medical steps.",
+                    b2: "Interaction System: Clean and responsive system for manipulating tools and patient avatars.",
+                    b3: "Tech: Unity (C#), ScriptableObjects for data-driven design."
                 },
                 soa: {
-                    b1: "Stealth-Action: 2D game developed in Godot 4.",
-                    b2: "Systems: AI detection, stealth mechanics, QTE combat, and health systems.",
-                    b3: "Created original characters hand-drawn assets.",
-                    b4: "Logic: Signal-driven logic for modular gameplay & environmental interaction.",
-                    awardTitle: "NSC 2025 2nd Place",
-                    awardBadge: "NSC 2025 2nd Place Certificate"
+                    b1: "Stealth AI: Modular state machine (Idle/Suspicious/Alert) driven by sensory data.",
+                    b2: "Perception: 2D raycasting and Area2D triggers for dynamic enemy vision.",
+                    b3: "Architecture: Signal-driven logic decoupling combat, UI, and audio.",
+                    awardTitle: "NSC 2025 National Round Funded Project",
+                    awardBadge: "NSC 2025 National Round Funded Project Certificate"
                 },
                 tech2d: {
-                    desc: "An ongoing 2D Unity gameplay sandbox for experimenting with core mechanics such as player movement, combat systems, and enemy behavior. The project focuses on modular system design, responsiveness, and iterative gameplay development rather than content completion."
+                    b1: "Physics Controller: Responsive movement with coyote time and jump buffering.",
+                    b2: "Modular Logic: Tunable acceleration parameters to simulate weight/inertia.",
+                    b3: "Combat: Shotgun logic with procedural spread and decoupled input readers."
                 },
                 tech3d: {
-                    desc: "An ongoing 3D Unity technical sandbox for experimenting with gameplay and movement systems. This project is used to prototype and test ideas such as procedural movement, Rigidbody-based control. The focus is on building on complex gameplay systems with clean, modular code, prioritizing technical exploration and learning over polished visuals or finished content."
+                    b1: "Procedural Legs: Step-target logic calculating ideal foot positions from velocity.",
+                    b2: "Grounding: Raycast-based body orientation adapting to uneven terrain.",
+                    b3: "Math & Easing: `Mathf.SmoothStep` for naturalistic, weight-simulated step arcs."
                 }
             },
             contact: {
@@ -209,23 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 playDemo: "เล่น Demo",
                 viewDetails: "ดูรายละเอียด",
                 nurse: {
-                    b1: "Educational Simulation: จำลองสถานการณ์เพื่อการเรียนรู้สำหรับนักศึกษาพยาบาล",
-                    b2: "Gameplay Logic: พัฒนาระบบโต้ตอบและระบบที่ทำงานด้วยState (State-driven)",
-                    b3: "Tech: พัฒนาโดยใช้ Unity และภาษา C#"
+                    b1: "Scenario FSM: ใช้ Finite State Machine ตรวจสอบการกระทำของผู้เล่นตามขั้นตอนทางการแพทย์",
+                    b2: "Interaction System: ระบบการโต้ตอบที่เรียบง่ายและตอบสนองได้ดี สำหรับการหยิบจับอุปกรณ์",
+                    b3: "Tech: Unity (C#) และ ScriptableObjects สำหรับการออกแบบที่ขับเคลื่อนด้วยข้อมูล"
                 },
                 soa: {
-                    b1: "Stealth-Action: เกม 2D แนวลอบเร้น พัฒนาด้วย Godot 4",
-                    b2: "Systems: ระบบตรวจจับ AI, กลไกการลอบเร้น, การต่อสู้แบบ QTE, และระบบพลังชีวิต",
-                    b3: "Assets: Characters Assets วาดด้วยมือเองทั้งหมด",
-                    b4: "ระบบตรรกะ: ใช้ระบบ Signal-driven สำหรับการโต้ตอบกับสภาพแวดล้อม",
-                    awardTitle: "รองชนะเลิศอันดับ 2 NSC 2025",
-                    awardBadge: "เกียรติบัตร รองชนะเลิศอันดับ 2 NSC 2025"
+                    b1: "Stealth AI: State Machine แบบโมดูลาร์ (Idle/Suspicious/Alert) ขับเคลื่อนด้วยข้อมูลการรับรู้",
+                    b2: "Perception: ใช้ 2D Raycasting และ Area2D Triggers สร้างระยะการมองเห็นของศัตรูแบบไดนามิก",
+                    b3: "Architecture: ใช้ Signal Pattern แยกการทำงานระหว่างระบบต่อสู้, UI และเสียง",
+                    awardTitle: "โครงการที่ผ่านเข้ารอบชิงชนะเลิศ NSC 2025 (ได้รับทุนสนับสนุน)",
+                    awardBadge: "ใบรับรองโครงการที่ผ่านเข้ารอบชิงชนะเลิศ NSC 2025"
                 },
                 tech2d: {
-                    desc: "โครงการ Sandbox ทดลองระบบเกมเพลย์ 2D ใน Unity เพื่อศึกษาและทดสอบกลไกหลักต่างๆ เช่น การเคลื่อนที่ของผู้เล่น ระบบการต่อสู้ และพฤติกรรมของศัตรู โปรเจกต์นี้เน้นการออกแบบระบบที่เป็นโมดูล ความตอบสนองที่รวดเร็ว และการพัฒนาเกมเพลย์แบบวนซ้ำมากกว่าการสร้างคอนเทนต์ให้สมบูรณ์"
+                    b1: "Physics Controller: ระบบควบคุมตอบสนองฉับไว พร้อม Coyote Time และ Jump Buffering",
+                    b2: "Modular Logic: พารามิเตอร์อัตราเร่งที่ปรับจูนได้ เพื่อจำลองน้ำหนักและแรงเฉื่อย",
+                    b3: "Combat: ตรรกะปืนลูกซองที่มีการกระจายกระสุนแบบ Procedural และแยกระบบรับอินพุต"
                 },
                 tech3d: {
-                    desc: "โปรเจกต์นี้ถูกใช้เป็นพื้นที่ทดลองสำหรับพัฒนาระบบเกมเพลย์และการเคลื่อนไหวโดยอาศัยฟิสิกส์ เช่น การควบคุมตัวละครด้วย Rigidbody การเคลื่อนไหวแบบ procedural เบื้องต้น จุดประสงค์หลักคือการสร้างและทดสอบระบบเกมที่มีความซับซ้อน เน้นโครงสร้างโค้ดที่เป็นระเบียบ และความเข้าใจเชิงเทคนิค มากกว่าเป็นเกมที่สมบูรณ์ด้านกราฟิกหรือเนื้อหา"
+                    b1: "Procedural Legs: คำนวณตำแหน่งวางเท้าที่เหมาะสมจากความเร็วและความสูงของพื้นที่",
+                    b2: "Grounding: ปรับองศาของลำตัวตามพื้นผิวที่ไม่เรียบด้วย Raycast",
+                    b3: "Math & Easing: ใช้ `Mathf.SmoothStep` คำนวณส่วนโค้งการก้าวเท้าให้ดูเป็นธรรมชาติ"
                 }
             },
             contact: {

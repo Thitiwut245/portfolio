@@ -69,26 +69,9 @@
                 <div class="main-column fade-in">
                     <h2>Project Overview</h2>
                     <p>
-                        <em>
-                            This project is ongoing; the features presented here represent the current stage of
-                            development.
-                        </em>
-                    </p>
-                    <p>
-                        IRONQUAD Tech Demo 3D is a Unity technical prototype focused on experimenting with procedural
-                        movement for a quadruped mech. Instead of using traditional animation clips, the mech moves
-                        using physics-based Rigidbody locomotion combined with procedural inverse kinematics.
-                    </p>
-                    <p>
-                        The main goal of this project is to explore grounded movement, natural leg stepping, and stable
-                        foot placement on uneven terrain. Each leg continuously uses raycasts to find the ground and
-                        determine where it should step next.
-                    </p>
-                    <p>
-                        At a high level, the system works as follows: the mech’s body moves using physics, each leg
-                        calculates its ideal foot position based on the terrain, and when a foot moves too far from its
-                        target, the system triggers a step. The leg then moves along a smooth arc to the new position,
-                        creating movement that feels heavy, mechanical, and grounded.
+                        A technical prototype exploring procedural locomotion and grounding for a quadruped mech. The
+                        primary goal is to simulate heavy, mechanical movement using physics-based Rigidbody locomotion
+                        and procedural inverse kinematics, without relying on pre-baked animation clips.
                     </p>
 
                     <h3 style="margin-top: 2rem;">Details & Responsibilities</h3>
@@ -97,11 +80,8 @@
                         <!-- Locomotion & Physics -->
                         <div class="responsibility-card">
                             <h4>Locomotion & Physics</h4>
-                            <p>Built a leg control pipeline (ideal foot target → step decision → procedural step
-                                motion
-                                → IK solve) and implemented
-                                Rigidbody-driven movement with hover/jetpack behavior for stability across uneven
-                                terrain.</p>
+                            <p>Engineered a procedural stepping system that calculates ideal foot targets based on
+                                velocity and terrain height.</p>
 
                             <div class="responsibility-media">
                                 <video autoplay loop muted playsinline>
@@ -142,14 +122,8 @@
                         <!-- Procedural Animation -->
                         <div class="responsibility-card">
                             <h4>Procedural Animation</h4>
-                            <p>
-                                Designed stepping arcs using SmoothStep easing with a sine-wave lift to simulate
-                                weight
-                                transfer, and implemented
-                                visual leg joints that bend toward the computed foot target for responsive
-                                mechanical
-                                articulation.
-                            </p>
+                            <p>Implemented `Mathf.SmoothStep` interpolation for naturalistic leg lift and planting arcs,
+                                simulating weight transfer.</p>
 
                             <div class="responsibility-media">
                                 <video autoplay loop muted playsinline>
@@ -190,7 +164,7 @@
                                 <li style="margin-bottom: 0.25rem;"><strong>WASD</strong>: Physics-based movement
                                 </li>
                                 <li style="margin-bottom: 0.25rem;"><strong>Space</strong>: Hover / Jetpack</li>
-                                <li style="margin-bottom: 0.25rem;"><strong>Auto-Hover</strong>: Triggers on wall
+                                <li style="margin-bottom: 0.25rem;"><strong>Auto-Hover</strong>: Triggers on obstacle
                                     detection</li>
                             </ul>
 
@@ -222,7 +196,11 @@
                         </li>
                         <li>
                             <span class="meta-label">Duration</span>
-                            <span class="meta-value">Ongoing</span>
+                            <span class="meta-value">1 month</span>
+                        </li>
+                        <li>
+                            <span class="meta-label">Engine</span>
+                            <span class="meta-value">Unity 6000.3.0f1</span>
                         </li>
                     </ul>
 

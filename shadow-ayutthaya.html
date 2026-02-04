@@ -73,23 +73,21 @@
                 <div class="main-column fade-in">
                     <h2>Project Overview</h2>
                     <p>
-                        Shadow of Ayutthaya is a 2D stealth-action game developed in Godot 4, set during a historical
-                        conflict in Southeast Asia. The player assumes the role of a commoner who, after completing his
-                        forced labor duties, infiltrates an enemy-controlled Burmese military camp to rescue his younger
-                        brother.
+                        A 2D stealth-action game aimed at high-stakes avoidance and timing, selected for funded project
+                        support at the national level (NSC 2025).
                     </p>
                     <p>
-                        Gameplay focuses on stealth traversal, enemy perception management, and high-risk close-quarters
-                        encounters. The narrative context supports the gameplay by placing the player in asymmetrical,
-                        high-stakes scenarios where avoidance, timing, and situational awareness are critical.
+                        This project focuses on stealth traversal, enemy perception management, and high-risk
+                        close-quarters
+                        encounters. The gameplay places the player in asymmetrical scenarios where avoidance, timing,
+                        and situational awareness are critical.
                     </p>
 
                     <div class="certificate-container"
                         style="margin: 2rem 0; padding: 1.5rem; background: var(--surface-color); border-left: 4px solid var(--primary-color); border-radius: var(--border-radius-sm);">
                         <h4
                             style="margin-top: 0; color: var(--primary-color); display: flex; align-items: center; gap: 0.5rem;">
-                            <span data-i18n="projects.soa.awardTitle">NSC 2025 2nd Place
-                                Certificate</span>
+                            <span data-i18n="projects.soa.awardTitle">NSC 2025 National Round Funded Project</span>
                         </h4>
                         <p style="margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.9;"
                             data-i18n="projects.soa.awardDesc">
@@ -108,40 +106,38 @@
                         </a>
                     </div>
 
-                    <h3 style="margin-top: 2rem;">Details & Responsibilities</h3>
+                    <h3 style="margin-top: 2rem;">Technical Contributions</h3>
                     <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 2rem; color: var(--text-main);">
                         <li style="margin-bottom: 0.5rem;">
                             <video autoplay muted loop playsinline
                                 style="width: 100%; max-width: 500px; display: block; margin-bottom: 0.5rem; border-radius: 8px;">
                                 <source src="assets/SOA/SoAEnemyVision.mp4" type="video/mp4">
                             </video>
-                            <strong>Stealth AI System:</strong> Implemented enemy guard
-                            behavior using a state-based architecture, including transitions between Idle, Suspicious,
-                            and Alert states, driven by player visibility and sound cues.
+                            <strong>Stealth AI State Machine:</strong> Architected a modular AI system (Idle,
+                            Suspicious, Alert) driven by sensory data, handling state transitions and behavior
+                            overrides.
                         </li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Enemy Perception & Detection:</strong> Developed
-                            field-of-view (FOV) detection using raycasting combined with Area2D monitoring to simulate
-                            vision cones, line-of-sight checks, and</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Perception System:</strong> Implemented 2D raycasting
+                            and Area2D triggers to simulate dynamic vision cones and hearing ranges for enemy detection.
+                        </li>
                         <li style="margin-bottom: 0.5rem;">
                             <video autoplay muted loop playsinline
                                 style="width: 100%; max-width: 500px; display: block; margin-bottom: 0.5rem; border-radius: 8px;">
                                 <source src="assets/SOA/SoAQTE.mp4" type="video/mp4">
                             </video>
-                            <strong>QTE Combat System:</strong> Designed and implemented
-                            timing-based Quick Time Event mechanics for silent takedowns and close-quarters encounters,
-                            reinforcing stealth-oriented gameplay.
+                            <strong>QTE Combat Logic:</strong> Developed a timing-window system for stealth takedowns,
+                            separating input validation from visual feedback for precise control.
                         </li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Signal-Driven Architecture:</strong> Utilized Godot’s
-                            signal system to decouple gameplay logic from UI and audio systems, improving
-                            maintainability and modularity.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Signal-Driven Architecture:</strong> Decoupled
+                            gameplay logic using Godot signals, ensuring independent communication between combat, UI,
+                            and animation systems.</li>
                         <li style="margin-bottom: 0.5rem;">
                             <video autoplay muted loop playsinline
                                 style="width: 100%; max-width: 500px; display: block; margin-bottom: 0.5rem; border-radius: 16px;">
                                 <source src="assets/SOA/SoAAnimate.mp4" type="video/mp4">
                             </video>
-                            <strong>Hand-Drawn Asset Pipeline:</strong> Created original
-                            2D sprites and animations and integrated them into the gameplay pipeline, ensuring
-                            consistency between visual feedback and underlying mechanics.
+                            <strong>Asset Logic Integration:</strong> Integrated hand-drawn animation states directly
+                            into the gameplay loop, ensuring frame-perfect synchronization with hitboxes.
                         </li>
                     </ul>
 
@@ -174,7 +170,7 @@
                         </li>
                         <li>
                             <span class="meta-label">Award</span>
-                            <span class="meta-value">2nd Place</span>
+                            <span class="meta-value">National Round Funded</span>
                         </li>
                     </ul>
 
