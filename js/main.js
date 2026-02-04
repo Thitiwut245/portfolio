@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     b3: "Tech: Unity (C#), ScriptableObjects for data-driven design."
                 },
                 soa: {
-                    b1: "Stealth AI: Modular state machine (Idle/Suspicious/Alert) driven by sensory data.",
+                    b1: "Stealth AI: Modular state machine (Idle/Suspicious/Alert)",
                     b2: "Perception: 2D raycasting and Area2D triggers for dynamic enemy vision.",
                     b3: "Architecture: Signal-driven logic decoupling combat, UI, and audio.",
                     awardTitle: "NSC 2025 National Round Funded Project",
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             hero: {
                 role: "Gameplay Programmer.",
-                desc: "สนใจในการเขียนโปรแกรมและการพัฒนาเกม พร้อมที่จะเรียนรู้และมีส่วนร่วมในการทำงานภายในสภาพแวดล้อมการพัฒนาเกมเพลย์",
+                desc: "สนใจในการเขียนโปรแกรมและการพัฒนาเกม พร้อมที่จะเรียนรู้และมีส่วนร่วมในการทำงานภายในสภาพแวดล้อมการพัฒนาเกม",
                 downloadResume: "ดาวน์โหลดเรซูเม่",
                 contact: "ติดต่อฉัน"
             },
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     b3: "Tech: Unity (C#) และ ScriptableObjects สำหรับการออกแบบที่ขับเคลื่อนด้วยข้อมูล"
                 },
                 soa: {
-                    b1: "Stealth AI: State Machine แบบโมดูลาร์ (Idle/Suspicious/Alert) ขับเคลื่อนด้วยข้อมูลการรับรู้",
+                    b1: "Stealth AI: State Machine แบบโมดูลาร์ (Idle/Suspicious/Alert)",
                     b2: "Perception: ใช้ 2D Raycasting และ Area2D Triggers สร้างระยะการมองเห็นของศัตรูแบบไดนามิก",
                     b3: "Architecture: ใช้ Signal Pattern แยกการทำงานระหว่างระบบต่อสู้, UI และเสียง",
                     awardTitle: "โครงการที่ผ่านเข้ารอบชิงชนะเลิศ NSC 2025 (ได้รับทุนสนับสนุน)",
