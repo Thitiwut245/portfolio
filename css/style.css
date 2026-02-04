@@ -803,6 +803,28 @@ p.lead {
     border-color: var(--primary-color);
 }
 
+/* ... existing content ... */
+
+/* Contact Dark Mode Fix */
+body.dark-mode .contact-container {
+    background: #fff4e3;
+    /* Force light background to match user request for black text */
+}
+
+body.dark-mode .contact-container h2,
+body.dark-mode .contact-container p,
+body.dark-mode .contact-icon-link {
+    color: #000000 !important;
+}
+
+body.dark-mode .contact-icon-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .contact-icon-link svg {
+    color: #000000;
+}
+
 .project-card:hover .tech-tag {
     border-color: var(--primary-color);
     color: var(--primary-color);
