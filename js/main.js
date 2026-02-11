@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "Resume"
             },
             hero: {
-                role: "Gameplay Programmer.",
+                role: "Game Developer.",
                 desc: "Interested in gameplay programming and development. Always ready to learn and contribute in a game development environment.",
                 downloadResume: "Download Resume",
 
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "เรซูเม่"
             },
             hero: {
-                role: "Gameplay Programmer.",
+                role: "Game Developer.",
                 desc: "สนใจในการเขียนโปรแกรมและการพัฒนาเกม พร้อมที่จะเรียนรู้และมีส่วนร่วมในการทำงานภายในสภาพแวดล้อมการพัฒนาเกม",
                 downloadResume: "ดาวน์โหลดเรซูเม่",
                 contact: "ติดต่อฉัน"
