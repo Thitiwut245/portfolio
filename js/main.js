@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             hero: {
                 role: "Game Developer.",
-                desc: "Interested in gameplay programming and development. Always ready to learn and contribute in a game development environment.",
+                desc: "Interested in gameplay programming and game development. Always ready to learn and contribute in a game development environment.",
                 downloadResume: "Download Resume",
 
             },
