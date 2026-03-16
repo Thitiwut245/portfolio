@@ -136,18 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "Resume"
             },
             hero: {
-                role: "Game Developer.",
-                desc: "Interested in gameplay programming and game development. Always ready to learn and contribute in a game development environment.",
+                role: "Game & Web Developer.",
+                desc: "Interested in gameplay programming and full-stack web development. Passionate about building interactive experiences across multiple platforms.",
                 downloadResume: "Download Resume",
 
             },
             about: {
                 title: "About Me",
-                techStack: "Tech Stack",
+                techStack: "Tech Stack & Tools",
                 skills: "Personal Skills",
-                p1: "Hi! My name is Thitiwut Sriamonrat. I am a third-year Computer Science student at the College of Computing, Khon Kaen University. My academic focus is game development, with a particular interest in gameplay programming and interactive systems.",
-                p2: "My interest in games and animation began at an early age, driven by curiosity about how interactive experiences are designed and built. This led to my first experience in game development during high school, where I created simple projects using Unity. That experience influenced my decision to pursue formal studies in programming and game development at the university level.",
-                p3: "Currently, I focus on building gameplay features and small systems in Unity, including player interaction, mechanics, and UI behavior. I learn through experimentation and iteration, refining my projects to gain practical understanding of gameplay implementation.",
+                p1: "Hi! My name is Thitiwut Sriamonrat. I am a third-year Computer Science student at the College of Computing, Khon Kaen University. My academic focus spans across game development and web technology, with a particular interest in creating interactive systems.",
+                p2: "My interest in games and animation began at an early age, driven by curiosity about how interactive experiences are designed and built. This led to my first experience in game development during high school, and later expanded into web development, where I enjoy building functional and visually appealing applications.",
+                p3: "Currently, I focus on building gameplay features in Unity and developing modern web applications using frameworks like Vue 3 and Spring Boot. I learn through experimentation and iteration, refining my projects to gain practical understanding of system implementation.",
                 certifications: "Certifications",
                 downloadCert: "Download Certificate"
             },
@@ -155,10 +155,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "Projects",
                 playDemo: "Play Demo",
                 viewDetails: "View Details ",
+                overview: "Project Overview",
+                features: "Key Features",
+                technical: "Technical Contributions",
+                projectInfo: "Project Info",
+                backToProjects: "Back to Projects",
                 nurse: {
+                    card: "A collaborative nursing simulation platform featuring Pre-test/Post-test assessments and game-based learning. Includes clinical certification.",
+                    overview: "The Nursing Simulation Platform was developed in collaboration with nursing students to create a platform for awareness and learning in managing common problems in the elderly. It includes Pre-test & Post-test assessments and game-based simulations to apply nursing knowledge. A certificate is awarded upon passing the Post-test with a score of over 60%.",
                     b1: "Scenario FSM: Finite State Machine validates player actions against strict medical steps.",
                     b2: "Interaction System: Clean and responsive system for manipulating tools and patient avatars.",
-                    b3: "Tech: Unity (C#), ScriptableObjects for data-driven design."
+                    b3: "2D Bone Animation: Visualized complex medical procedures dynamically using advanced bone controllers."
                 },
                 soa: {
                     b1: "Stealth AI: Modular state machine (Idle/Suspicious/Alert)",
@@ -176,6 +183,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     b1: "Procedural Legs: Step-target logic calculating ideal foot positions from velocity.",
                     b2: "Grounding: Raycast-based body orientation adapting to uneven terrain.",
                     b3: "Math & Easing: `Mathf.SmoothStep` for naturalistic, weight-simulated step arcs."
+                },
+                calendarX: {
+                    card: "A vibrant calendar app allowing emoji-based custom events, supporting global holidays and religious dates.",
+                    overview: "Calendar X is a calendar application where users can insert emojis or stickers into custom events to make them attractive and colorful. It supports holidays and important dates for various countries and religions.",
+                    b1: "UI/UX Design: Designed user interface and app flow using Figma.",
+                    b2: "App Development: Built the application using Flutter framework.",
+                    b3: "Tools: Developed with Visual Studio Code and Android Studio."
+                },
+                archery: {
+                    b1: "Management System: Solves unsystematic data storage and data loss issues.",
+                    b2: "Equipment Tracking: Database system for equipment borrowing and returning.",
+                    b3: "Progress Tracking: Records scores and practice statistics so users can evaluate themselves."
+                },
+                squader: {
+                    b1: "Swipe-to-Match: Find players with similar interests and games.",
+                    b2: "Real-Time Chat: Instant messaging for matched players.",
+                    b3: "Tech Stack: Developed using Vue 3, Node.js, and PostgreSQL."
                 }
             },
             contact: {
@@ -192,18 +216,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "เรซูเม่"
             },
             hero: {
-                role: "Game Developer.",
-                desc: "สนใจในการเขียนโปรแกรมและการพัฒนาเกม พร้อมที่จะเรียนรู้และมีส่วนร่วมในการทำงานภายในสภาพแวดล้อมการพัฒนาเกม",
+                role: "Game & Web Developer.",
+                desc: "มีความสนใจในด้าน Gameplay Programming และการพัฒนา Full-stack Web พร้อมที่จะเรียนรู้และสร้างประสบการณ์เชิงโต้ตอบในรูปแบบต่างๆ",
                 downloadResume: "ดาวน์โหลดเรซูเม่",
                 contact: "ติดต่อฉัน"
             },
             about: {
                 title: "เกี่ยวกับฉัน",
-                techStack: "เครื่องมือที่ใช้",
+                techStack: "เครื่องมือและภาษาที่ใช้",
                 skills: "ทักษะส่วนบุคคล",
-                p1: "สวัสดีครับ ผมชื่อ ธิติวุฒิ ศรีอมรรัตน์ นักศึกษาวิทยาลัยการคอมพิวเตอร์ หลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น มีความสนใจด้านการพัฒนาเกม โดยมีความสนใจเป็นพิเศษในด้านการเขียนโปรแกรมเกมเพลย์และระบบเชิงโต้ตอบ",
-                p2: "ความสนใจด้านเกมและแอนิเมชันของผมเริ่มต้นตั้งแต่วัยเด็ก จากความอยากรู้เกี่ยวกับกระบวนการออกแบบและพัฒนาประสบการณ์เชิงโต้ตอบ ความสนใจดังกล่าวนำไปสู่ประสบการณ์แรกในการพัฒนาเกมในช่วงระดับมัธยมศึกษา ซึ่งผมได้สร้างเกมเล็กๆโดยใช้ Unity ประสบการณ์เหล่านี้มีบทบาทสำคัญต่อการตัดสินใจศึกษาต่อด้านการเขียนโปรแกรมและการพัฒนาเกมในระดับอุดมศึกษา",
-                p3: "ปัจจุบัน ผมได้โฟกัสกับการพัฒนาฟีเจอร์ด้านเกมเพลย์และระบบเล็กๆใน Unity เช่น ระบบ Interaction Mechanics และ UI Behavior โดยใช้การเรียนรู้ผ่านการทดลองและการพัฒนาแบบซ้ำๆ (iterative development) เพื่อปรับปรุงและยกระดับโครงการอย่างต่อเนื่อง และเสริมสร้างความเข้าใจเชิงปฏิบัติในการพัฒนาระบบเกมเพลย์",
+                p1: "สวัสดีครับ ผมชื่อ ธิติวุฒิ ศรีอมรรัตน์ นักศึกษาวิทยาลัยการคอมพิวเตอร์ หลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น มีความสนใจในด้านการพัฒนาเกมและเทคโนโลยีเว็บ โดยมีความสนใจเป็นพิเศษในด้านการสร้างระบบเชิงโต้ตอบ",
+                p2: "ความสนใจด้านเกมและแอนิเมชันของผมเริ่มต้นตั้งแต่วัยเด็ก จากความอยากรู้เกี่ยวกับกระบวนการออกแบบและพัฒนาประสบการณ์เชิงโต้ตอบ นำไปสู่ประสบการณ์แรกในการพัฒนาเกมในช่วงมัธยมศึกษา และต่อมาได้ขยายความสนใจไปยังการพัฒนาเว็บ ซึ่งผมสนุกกับการสร้างแอปพลิเคชันที่มีประสิทธิภาพและสวยงาม",
+                p3: "ปัจจุบัน ผมเน้นการพัฒนาฟีเจอร์เกมใน Unity และสร้างเว็บแอปพลิเคชันสมัยใหม่โดยใช้เฟรมเวิร์กอย่าง Vue 3 และ Spring Boot ผมเรียนรู้ผ่านการทดลองและการพัฒนาอย่างต่อเนื่อง เพื่อเสริมสร้างความเข้าใจเชิงปฏิบัติในการพัฒนาระบบต่างๆ",
                 certifications: "ใบรับรอง / เกียรติบัตร",
                 downloadCert: "ดาวน์โหลดใบรับรอง"
             },
@@ -211,10 +235,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "ผลงาน",
                 playDemo: "เล่น Demo",
                 viewDetails: "ดูรายละเอียด",
+                overview: "ภาพรวมโครงการ",
+                features: "ฟีเจอร์สำคัญ",
+                technical: "ส่วนที่รับผิดชอบ",
+                projectInfo: "ข้อมูลโครงการ",
+                backToProjects: "กลับหน้าหลัก",
                 nurse: {
+                    card: "แพลตฟอร์มจำลองการเรียนรู้ด้านการพยาบาลที่ประกอบไปด้วยแบบทดสอบ Pre/Post-test และการเรียนรู้ผ่านเกม พร้อมใบรับรองผล",
+                    overview: "Nursing Simulation Platform ถูกพัฒนาร่วมกับนักศึกษาคณะพยาบาลศาสตร์ ในการสร้างแพลตฟอร์มที่ให้นักศึกษาพยาบาลได้สร้างความตระหนักและการเรียนรู้ในการจัดการปัญหาที่พบบ่อยในผู้สูงอายุ โดยประกอบไปด้วยการทำแบบทดสอบ Pre-test & Post-test และการเล่นเกมเพื่อจำลองการประยุกต์ใช้ความรู้ด้านการพยาบาล พร้อมยังมี Certificate รับรองหลังการทำ Post-test ผ่านเกิน 60%",
                     b1: "Scenario FSM: ใช้ Finite State Machine ตรวจสอบการกระทำของผู้เล่นตามขั้นตอนทางการแพทย์",
                     b2: "Interaction System: ระบบการโต้ตอบที่เรียบง่ายและตอบสนองได้ดี สำหรับการหยิบจับอุปกรณ์",
-                    b3: "Tech: Unity (C#) และ ScriptableObjects สำหรับการออกแบบที่ขับเคลื่อนด้วยข้อมูล"
+                    b3: "2D Bone Animation: ใช้ 2D Bone Animate จำลองขั้นตอนทางการแพทย์ที่ซับซ้อนให้เห็นภาพแบบไดนามิก"
                 },
                 soa: {
                     b1: "Stealth AI: State Machine แบบโมดูลาร์ (Idle/Suspicious/Alert)",
@@ -232,6 +263,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     b1: "Procedural Legs: คำนวณตำแหน่งวางเท้าที่เหมาะสมจากความเร็วและความสูงของพื้นที่",
                     b2: "Grounding: ปรับองศาของลำตัวตามพื้นผิวที่ไม่เรียบด้วย Raycast",
                     b3: "Math & Easing: ใช้ `Mathf.SmoothStep` คำนวณส่วนโค้งการก้าวเท้าให้ดูเป็นธรรมชาติ"
+                },
+                calendarx: {
+                    b1: "UI/UX Design: ออกแบบ UI และการทำงานของแอปฯ ผ่าน Figma",
+                    b2: "App Development: พัฒนาแอปพลิเคชันโดยใช้ Flutter",
+                    b3: "Tools: ใช้เครื่องมือ Visual Studio Code และ Android Studio ในการพัฒนา"
+                },
+                archery: {
+                    b1: "Management System: แก้ปัญหาการจัดเก็บข้อมูลที่ไม่เป็นระบบ และการสูญหายของข้อมูล",
+                    b2: "Equipment Tracking: จัดการฐานข้อมูลของการยืม-คืนอุปกรณ์",
+                    b3: "Progress Tracking: เก็บคะแนนและสถิติการซ้อมเพื่อให้ผู้ใช้งานสามารถติดตามและประเมินผลตนเองได้"
+                },
+                squader: {
+                    b1: "Swipe-to-Match: ค้นหาเพื่อนเล่นเกมที่มีความสนใจตรงกัน",
+                    b2: "Real-Time Chat: ระบบแชทแบบเรียลไทม์เพื่อสื่อสารได้ทันที",
+                    b3: "Tech Stack: พัฒนาด้วย Vue 3, Node.js และ PostgreSQL"
                 }
             },
             contact: {

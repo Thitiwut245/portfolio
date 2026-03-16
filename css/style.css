@@ -923,6 +923,17 @@ body.dark-mode .contact-icon-link svg {
     border-color: var(--primary-color);
 }
 
+.stack-item.highlight {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-hover);
+}
+
+.stack-item.highlight:hover {
+    background: var(--primary-hover);
+    color: white;
+}
+
 .stack-item.clickable {
     cursor: pointer;
     text-decoration: none;
