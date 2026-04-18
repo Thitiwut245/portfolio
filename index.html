@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
-    <meta name="description" content="Portfolio of a Game Developer">
+    <title>Thitiwut Sriamonrat — Game Developer</title>
+    <meta name="description" content="Portfolio of Thitiwut Sriamonrat — Game Developer specializing in gameplay programming and interactive systems.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,18 +20,18 @@
                     <li><a href="#about" class="nav-link" data-i18n="nav.about">About Me</a></li>
                     <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
                     <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
-                    <li><a href="assets/Resume.pdf" class="nav-link" target="_blank"
-                            style="color: var(--primary-color);" data-i18n="nav.resume">Resume</a></li>
+                    <li><a href="assets/Resume.pdf" class="nav-link resume-link" target="_blank"
+                            data-i18n="nav.resume">Resume</a></li>
                 </ul>
                 <div class="nav-controls">
                     <button id="theme-toggle" aria-label="Toggle Dark Mode">
                         <!-- Sun Icon -->
-                        <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
                             <path fill="currentColor"
                                 d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 2c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
                         </svg>
                         <!-- Moon Icon -->
-                        <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                        <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" style="display: none;">
                             <path fill="currentColor"
                                 d="M9.37 5.51c-.18.64-.27 1.31-.27 1.99 0 4.08 3.32 7.4 7.4 7.4.68 0 1.35-.09 1.99-.27C17.45 17.19 14.93 19 12 19c-3.86 0-7-3.14-7-7 0-2.93 1.81-5.45 4.37-6.49zM12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
                         </svg>
@@ -48,10 +48,12 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content fade-in">
-                        <h1 data-i18n="hero.role">Game & Web Developer.</h1>
-                        <p class="lead" data-i18n="hero.desc">Interested in gameplay programming and full-stack web development. Passionate about building interactive experiences across multiple platforms.</p>
-                        <a href="assets/Resume.pdf" class="btn" data-i18n="hero.downloadResume" target="_blank">Download
-                            Resume</a>
+                        <h1 data-i18n="hero.role">Game Developer.</h1>
+                        <p class="lead" data-i18n="hero.desc">Interested in gameplay programming and interactive systems. Passionate about building interactive experiences in Unity and Godot.</p>
+                        <div class="hero-actions">
+                            <a href="assets/Resume.pdf" class="btn" data-i18n="hero.downloadResume" target="_blank">Download Resume</a>
+                            <a href="#projects" class="btn btn-secondary" data-i18n="projects.viewDetails">View Projects →</a>
+                        </div>
                     </div>
                     <div class="hero-image-container fade-in">
                         <img src="assets/studentphoto.jpg" alt="Thitiwut Sriamonrat">
@@ -80,7 +82,7 @@
                         </p>
 
                         <p class="lead" data-i18n="about.p3">
-                            Currently, I focus on building gameplay features and small systems in Unity, including
+                            Currently, I focus on building gameplay features and small systems in Unity and Godot, including
                             player interaction, mechanics, and UI behavior. I learn through experimentation and
                             iteration, refining my projects to gain practical understanding of gameplay
                             implementation.
@@ -105,11 +107,9 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-                <!-- Skills Section (Full Width, Horizontal) -->
+                <!-- Skills Section -->
                 <div class="skills-container">
                     <div class="skill-group">
                         <h3 data-i18n="about.techStack">Tech Stack & Tools</h3>
@@ -120,29 +120,19 @@
                             <div class="stack-item highlight">Java</div>
                             <div class="stack-item highlight">Python</div>
                             <div class="stack-item highlight">GDScript</div>
-                            <div class="stack-item highlight">TypeScript</div>
-                            <div class="stack-item highlight">Dart</div>
                         </div>
 
                         <!-- Engines & Frameworks -->
                         <div class="stack-grid compact" style="margin-bottom: 1.5rem;">
                             <div class="stack-item">Unity</div>
                             <div class="stack-item">Godot Engine</div>
-                            <div class="stack-item">Spring Boot</div>
-                            <div class="stack-item">Node.js</div>
-                            <div class="stack-item">Vue 3</div>
-                            <div class="stack-item">Flutter</div>
                         </div>
                         
                         <!-- Tools & Design -->
                         <div class="stack-grid compact">
                             <div class="stack-item">Firebase</div>
-                            <div class="stack-item">PostgreSQL</div>
-                            <div class="stack-item">Socket.io</div>
-                            <div class="stack-item">Tailwind CSS</div>
                             <div class="stack-item">Github</div>
                             <div class="stack-item">VS Code</div>
-                            <div class="stack-item">Android Studio</div>
                             <div class="stack-item">Figma</div>
                             <div class="stack-item">Photoshop</div>
                             <div class="stack-item">Canva</div>
@@ -155,12 +145,8 @@
                         <h3 data-i18n="about.skills">Personal Skills</h3>
                         <div class="stack-grid compact">
                             <div class="stack-item">Game Development</div>
-                            <div class="stack-item">Web Development</div>
-                            <div class="stack-item">Mobile Development</div>
                             <div class="stack-item">Gameplay Programming</div>
                             <div class="stack-item">UI/UX Design</div>
-                            <div class="stack-item">Frontend Development</div>
-                            <div class="stack-item">Backend Development</div>
                             <div class="stack-item">Problem Solving</div>
                             <div class="stack-item">Team Collaboration</div>
                         </div>
@@ -176,11 +162,10 @@
                 <h2 data-i18n="projects.title">Projects</h2>
                 <div class="projects-grid">
 
-                    <!-- Project 1 -->
+                    <!-- Project 1 — Nurse Learning Platform -->
                     <article class="project-card">
                         <div class="card-image">
-                            <!-- Placeholder for Screenshot -->
-                            <span><img src="assets/NurseLearningPlatform.png" alt="Project Screenshot"></span>
+                            <img src="assets/NurseLearningPlatform.png" alt="Nurse Learning Platform Screenshot">
                         </div>
                         <div class="card-content">
                             <div class="card-meta-row">
@@ -190,7 +175,7 @@
                             </div>
 
                             <h3>Nurse Learning Platform</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);" data-i18n="projects.nurse.card">
+                            <p class="project-summary" data-i18n="projects.nurse.card">
                                 An educational simulation for nursing students.
                             </p>
                             <ul class="project-bullets">
@@ -207,15 +192,15 @@
                             </div>
                             <div class="project-actions">
                                 <a href="nurse-learning.html" class="btn-text" data-i18n="projects.viewDetails">View
-                                    Details &rarr;</a>
+                                    Details →</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project 2 -->
+                    <!-- Project 2 — Shadow of Ayutthaya -->
                     <article class="project-card">
                         <div class="card-image">
-                            <span><img src="assets/SOA/SOA.png" alt="Project Screenshot"></span>
+                            <img src="assets/SOA/SOA.png" alt="Shadow of Ayutthaya Screenshot">
                         </div>
                         <div class="card-content">
                             <div class="card-meta-row">
@@ -224,13 +209,11 @@
                                 <span class="meta-item"><strong>Role:</strong> Game Developer</span>
                             </div>
                             <a href="assets/CertSecondRound_ธิติวุฒิ_056.pdf" target="_blank" class="award-badge"
-                                style="display: inline-block; background: #e09f3e; color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; text-decoration: none; transition: transform 0.2s;"
-                                onmouseover="this.style.transform='scale(1.05)'"
-                                onmouseout="this.style.transform='scale(1)'" data-i18n="projects.soa.awardBadge">
-                                NSC 2025 National Round Funded Project Certificate
+                                data-i18n="projects.soa.awardBadge">
+                                🏆 NSC 2025 National Round Funded Project Certificate
                             </a>
                             <h3>Shadow of Ayutthaya</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
+                            <p class="project-summary">
                                 A 2D stealth-action game aimed at high-stakes avoidance and timing.
                             </p>
                             <ul class="project-bullets">
@@ -243,221 +226,23 @@
                             </ul>
                             <div class="tech-tags">
                                 <span class="tech-tag">GDScript</span>
-
                             </div>
                             <div class="project-actions">
                                 <a href="shadow-ayutthaya.html" class="btn-text" data-i18n="projects.viewDetails">View
-                                    Details &rarr;</a>
+                                    Details →</a>
                             </div>
                         </div>
                     </article>
-
-
-
-                    <!-- Tech Demo 2D -->
-                    <article class="project-card">
-                        <div class="card-image">
-                            <!-- Placeholder for Screenshot -->
-                            <div
-                                style="width: 100%; height: 100%; background: #2d2d2d; display: flex; align-items: center; justify-content: center; color: #666;">
-                                <span><img src="assets/TechD2D/TechDemo2DHeader.png"
-                                        alt="Tech Demo 2D Screenshot"></span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">
-                                <span class="meta-item"><strong>Team:</strong> Solo</span>
-                                <span class="meta-item"><strong>Engine:</strong> Unity</span>
-                                <span class="meta-item"><strong>Role:</strong> Game Developer</span>
-                            </div>
-                            <h3>Tech Demo 2D</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
-                                A Unity sandbox for prototyping and refining 2D platformer physics and combat mechanics.
-                            </p>
-                            <ul class="project-bullets">
-                                <li data-i18n="projects.tech2d.b1"><strong>Physics Controller:</strong> Custom friction,
-                                    coyote time, and jump buffering (`PlayerMovement2D.cs`).</li>
-                                <li data-i18n="projects.tech2d.b2"><strong>Modular Logic:</strong> Tunable acceleration
-                                    parameters to simulate weight/inertia.</li>
-                                <li data-i18n="projects.tech2d.b3"><strong>Combat:</strong> Shotgun logic with
-                                    procedural spread and decoupled input readers.</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Unity</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="tech-demo-2d.html" class="btn-text" data-i18n="projects.viewDetails">View
-                                    Details &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Tech Demo 3D -->
-                    <article class="project-card">
-                        <div class="card-image">
-                            <!-- Placeholder for Screenshot -->
-                            <div
-                                style="width: 100%; height: 100%; background: #2d2d2d; display: flex; align-items: center; justify-content: center; color: #666;">
-                                <span><img src="assets/TechDemo3D/TechDemo3DHeader.png"
-                                        alt="Tech Demo 3D Screenshot"></span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">
-                                <span class="meta-item"><strong>Team:</strong> Solo</span>
-                                <span class="meta-item"><strong>Engine:</strong> Unity</span>
-                                <span class="meta-item"><strong>Role:</strong> Game Developer</span>
-                            </div>
-                            <h3>Tech Demo 3D</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
-                                A technical prototype exploring procedural locomotion and grounding for a quadruped
-                                mech.
-                            </p>
-                            <ul class="project-bullets">
-                                <li data-i18n="projects.tech3d.b1"><strong>Procedural Legs:</strong> Step-target logic
-                                    calculating ideal foot positions from velocity.</li>
-                                <li data-i18n="projects.tech3d.b2"><strong>Grounding:</strong> Raycast-based body
-                                    orientation adapting to uneven terrain.</li>
-                                <li data-i18n="projects.tech3d.b3"><strong>Math & Easing:</strong> `Mathf.SmoothStep`
-                                    for naturalistic, weight-simulated step arcs.</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Unity</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="tech-demo-3d.html" class="btn-text" data-i18n="projects.viewDetails">View
-                                    Details &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Calendar X -->
-                    <article class="project-card">
-                        <div class="card-image">
-                            <!-- Placeholder for Screenshot -->
-                            <div
-                                style="width: 100%; height: 100%; background: #2d2d2d; display: flex; align-items: center; justify-content: center; color: #666;">
-                                <span><img src="assets/CalendarX/unnamed.png" alt="Calendar X Screenshot"></span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">
-                                <span class="meta-item"><strong>Team:</strong> 4</span>
-                                <span class="meta-item"><strong>Tech:</strong> Flutter</span>
-                                <span class="meta-item"><strong>Role:</strong> App Developer</span>
-                            </div>
-                            <h3>Calendar X</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);" data-i18n="projects.calendarX.card">
-                                A mobile application built for the Elements of Mobile Application Development course.
-                            </p>
-                            <ul class="project-bullets">
-                                <li data-i18n="projects.calendarx.b1"><strong>UI/UX Design:</strong> Designed user
-                                    interface and app flow using Figma.</li>
-                                <li data-i18n="projects.calendarx.b2"><strong>App Development:</strong> Built the
-                                    application using Flutter framework.</li>
-                                <li data-i18n="projects.calendarx.b3"><strong>Tools:</strong> Developed with Visual
-                                    Studio Code and Android Studio.</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Figma</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="calendar-x.html" class="btn-text" data-i18n="projects.viewDetails">View Details
-                                    &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- KKU Archery Club -->
-                    <article class="project-card">
-                        <div class="card-image">
-                            <!-- Placeholder for Screenshot -->
-                            <div
-                                style="width: 100%; height: 100%; background: #2d2d2d; display: flex; align-items: center; justify-content: center; color: #666;">
-                                <span><img src="assets/KKU Archery Club/unnamed (4).png"
-                                        alt="KKU Archery Club Screenshot"></span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">
-                                <span class="meta-item"><strong>Team:</strong> 5</span>
-                                <span class="meta-item"><strong>Tech:</strong> Spring Boot</span>
-                                <span class="meta-item"><strong>Role:</strong> Web Developer</span>
-                            </div>
-                            <h3>KKU Archery Club</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
-                                A web application for managing the Khon Kaen University Archery Club.
-                            </p>
-                            <ul class="project-bullets">
-                                <li data-i18n="projects.archery.b1"><strong>Management System:</strong> Solves
-                                    unsystematic data storage and data loss issues.</li>
-                                <li data-i18n="projects.archery.b2"><strong>Equipment Tracking:</strong> Database system
-                                    for equipment borrowing and returning.</li>
-                                <li data-i18n="projects.archery.b3"><strong>Progress Tracking:</strong> Records scores
-                                    and practice statistics so users can evaluate themselves.</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Eclipse</span>
-                                <span class="tech-tag">Web Frontend</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="kku-archery.html" class="btn-text" data-i18n="projects.viewDetails">View
-                                    Details &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Squader -->
-                    <article class="project-card">
-                        <div class="card-image">
-                            <span><img src="assets/SA/SAHeader.png" alt="Squader Screenshot"></span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">
-                                <span class="meta-item"><strong>Team:</strong> 4</span>
-                                <span class="meta-item"><strong>Engine:</strong> Node.js</span>
-                                <span class="meta-item"><strong>Role:</strong> Full-stack Developer</span>
-                            </div>
-                            <h3>Squader</h3>
-                            <p class="project-summary" style="margin-bottom: 0.5rem; color: var(--text-color);">
-                                A platform for gamers to find and match with other players based on interests.
-                            </p>
-                            <ul class="project-bullets">
-                                <li data-i18n="projects.squader.b1"><strong>Swipe-to-Match:</strong> Find players with similar interests and games.</li>
-                                <li data-i18n="projects.squader.b2"><strong>Real-Time Chat:</strong> Instant messaging for matched players.</li>
-                                <li data-i18n="projects.squader.b3"><strong>Tech Stack:</strong> Developed using Vue 3, Node.js, and PostgreSQL.</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Vue 3</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="squader.html" class="btn-text" data-i18n="projects.viewDetails">View Details
-                                    &rarr;</a>
-                            </div>
-                        </div>
-                    </article>
-
                 </div>
             </div>
         </section>
 
-
-
-
-
         <!-- Contact -->
         <section id="contact">
             <div class="container fade-in">
-                <div class="contact-container" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <div class="contact-container">
                     <h2 data-i18n="contact.title">Contact</h2>
-                    <p class="lead" style="margin-bottom: 2rem;">Feel free to reach out on any
-                        platform!</p>
+                    <p class="lead" style="margin-bottom: 1.5rem; text-align: center; margin-left: auto; margin-right: auto;">Feel free to reach out on any platform!</p>
 
                     <div class="contact-links">
                         <!-- Email -->
@@ -466,7 +251,7 @@
                                 <path
                                     d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
-                            <span>Email : thitiwut.si@kkumail.com</span>
+                            <span>thitiwut.si@kkumail.com</span>
                         </a>
 
                         <!-- GitHub -->
@@ -476,7 +261,7 @@
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
-                            <span>GitHub : Thitiwut245</span>
+                            <span>Thitiwut245</span>
                         </a>
 
                         <!-- Facebook -->
@@ -486,7 +271,7 @@
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
-                            <span>Facebook : Thitiwut Sriamonrat</span>
+                            <span>Thitiwut Sriamonrat</span>
                         </a>
 
                         <!-- Instagram -->
@@ -496,7 +281,7 @@
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
-                            <span>Instagram : gust_sub0</span>
+                            <span>gust_sub0</span>
                         </a>
                     </div>
                 </div>
@@ -524,7 +309,7 @@
                     </svg>
                 </a>
             </div>
-            <p style="margin-top: 1.5rem; opacity: 0.7;">&copy; 2024 Thitiwut Sriamonrat. Built with passion and Vanilla JS.</p>
+            <p style="margin-top: 1.5rem; opacity: 0.5;">&copy; 2025 Thitiwut Sriamonrat</p>
         </div>
     </footer>
 

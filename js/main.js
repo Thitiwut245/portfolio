@@ -23,6 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(el);
     });
 
+    // 1b. Staggered Project Card Animations
+    const projectCards = document.querySelectorAll('.project-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                const index = parseInt(card.dataset.cardIndex || '0');
+                setTimeout(() => {
+                    card.classList.add('card-visible');
+                }, index * 120);
+                cardObserver.unobserve(card);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    projectCards.forEach((card, i) => {
+        card.dataset.cardIndex = i;
+        cardObserver.observe(card);
+    });
+
     // 2. Active Navigation Link Highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -51,10 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // 3. Optional: Smooth Scroll fix for some browsers or older systems (if needed)
-    // The CSS scroll-behavior: smooth handles this natively in modern browsers,
-    // keeping JS minimal.
-
     // 4. Interactive Eye Tracking
     const eyes = document.querySelectorAll('.eye');
 
@@ -76,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const angle = Math.atan2(dy, dx);
 
             // Calculate distance, clamped to maximum radius
-            // Eye width ~50px (updated), Pupil ~20px. Max movement radius approx 10-12px.
             const maxRadius = 12;
             const distance = Math.min(maxRadius, Math.hypot(dx, dy));
 
@@ -98,30 +113,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check saved theme
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+        if (sunIcon) sunIcon.style.display = 'none';
+        if (moonIcon) moonIcon.style.display = 'block';
     }
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
 
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-        } else {
-            localStorage.setItem('theme', 'light');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-    });
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                if (sunIcon) sunIcon.style.display = 'none';
+                if (moonIcon) moonIcon.style.display = 'block';
+            } else {
+                localStorage.setItem('theme', 'light');
+                if (sunIcon) sunIcon.style.display = 'block';
+                if (moonIcon) moonIcon.style.display = 'none';
+            }
+        });
+    }
 
-    // 6. Scroll Progress Bar
+    // 6. Scroll Progress Bar + Navbar Compact on Scroll
+    const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = (scrollTop / docHeight) * 100;
-        document.querySelector('.scroll-progress-bar').style.width = scrollPercent + '%';
+        const progressBar = document.querySelector('.scroll-progress-bar');
+        if (progressBar) progressBar.style.width = scrollPercent + '%';
+
+        // Compact navbar after scrolling 60px
+        if (navbar) {
+            if (scrollTop > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
     });
 
     // 7. Language Toggle
@@ -136,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "Resume"
             },
             hero: {
-                role: "Game & Web Developer.",
-                desc: "Interested in gameplay programming and full-stack web development. Passionate about building interactive experiences across multiple platforms.",
+                role: "Game Developer.",
+                desc: "Interested in gameplay programming and interactive systems. Passionate about building interactive experiences in Unity and Godot.",
                 downloadResume: "Download Resume",
 
             },
@@ -145,9 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "About Me",
                 techStack: "Tech Stack & Tools",
                 skills: "Personal Skills",
-                p1: "Hi! My name is Thitiwut Sriamonrat. I am a third-year Computer Science student at the College of Computing, Khon Kaen University. My academic focus spans across game development and web technology, with a particular interest in creating interactive systems.",
-                p2: "My interest in games and animation began at an early age, driven by curiosity about how interactive experiences are designed and built. This led to my first experience in game development during high school, and later expanded into web development, where I enjoy building functional and visually appealing applications.",
-                p3: "Currently, I focus on building gameplay features in Unity and developing modern web applications using frameworks like Vue 3 and Spring Boot. I learn through experimentation and iteration, refining my projects to gain practical understanding of system implementation.",
+                p1: "Hi! My name is Thitiwut Sriamonrat. I am a third-year Computer Science student at the College of Computing, Khon Kaen University. My academic focus is game development, with a particular interest in creating interactive systems.",
+                p2: "My interest in games and animation began at an early age, driven by curiosity about how interactive experiences are designed and built. This led to my first experience in game development during high school, where I created simple projects using Unity.",
+                p3: "Currently, I focus on building gameplay features and small systems in Unity and Godot. I learn through experimentation and iteration, refining my projects to gain practical understanding of system implementation.",
                 certifications: "Certifications",
                 downloadCert: "Download Certificate"
             },
@@ -173,33 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     b3: "Architecture: Signal-driven logic decoupling combat, UI, and audio.",
                     awardTitle: "NSC 2025 National Round Funded Project",
                     awardBadge: "NSC 2025 National Round Funded Project Certificate"
-                },
-                tech2d: {
-                    b1: "Physics Controller: Responsive movement with coyote time and jump buffering.",
-                    b2: "Modular Logic: Tunable acceleration parameters to simulate weight/inertia.",
-                    b3: "Combat: Shotgun logic with procedural spread and decoupled input readers."
-                },
-                tech3d: {
-                    b1: "Procedural Legs: Step-target logic calculating ideal foot positions from velocity.",
-                    b2: "Grounding: Raycast-based body orientation adapting to uneven terrain.",
-                    b3: "Math & Easing: `Mathf.SmoothStep` for naturalistic, weight-simulated step arcs."
-                },
-                calendarX: {
-                    card: "A vibrant calendar app allowing emoji-based custom events, supporting global holidays and religious dates.",
-                    overview: "Calendar X is a calendar application where users can insert emojis or stickers into custom events to make them attractive and colorful. It supports holidays and important dates for various countries and religions.",
-                    b1: "UI/UX Design: Designed user interface and app flow using Figma.",
-                    b2: "App Development: Built the application using Flutter framework.",
-                    b3: "Tools: Developed with Visual Studio Code and Android Studio."
-                },
-                archery: {
-                    b1: "Management System: Solves unsystematic data storage and data loss issues.",
-                    b2: "Equipment Tracking: Database system for equipment borrowing and returning.",
-                    b3: "Progress Tracking: Records scores and practice statistics so users can evaluate themselves."
-                },
-                squader: {
-                    b1: "Swipe-to-Match: Find players with similar interests and games.",
-                    b2: "Real-Time Chat: Instant messaging for matched players.",
-                    b3: "Tech Stack: Developed using Vue 3, Node.js, and PostgreSQL."
                 }
             },
             contact: {
@@ -216,8 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 resume: "เรซูเม่"
             },
             hero: {
-                role: "Game & Web Developer.",
-                desc: "มีความสนใจในด้าน Gameplay Programming และการพัฒนา Full-stack Web พร้อมที่จะเรียนรู้และสร้างประสบการณ์เชิงโต้ตอบในรูปแบบต่างๆ",
+                role: "Game Developer.",
+                desc: "มีความสนใจในด้าน Gameplay Programming และมีความหลงใหลในการสร้างประสบการณ์เชิงโต้ตอบใน Unity และ Godot",
                 downloadResume: "ดาวน์โหลดเรซูเม่",
                 contact: "ติดต่อฉัน"
             },
@@ -225,9 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "เกี่ยวกับฉัน",
                 techStack: "เครื่องมือและภาษาที่ใช้",
                 skills: "ทักษะส่วนบุคคล",
-                p1: "สวัสดีครับ ผมชื่อ ธิติวุฒิ ศรีอมรรัตน์ นักศึกษาวิทยาลัยการคอมพิวเตอร์ หลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น มีความสนใจในด้านการพัฒนาเกมและเทคโนโลยีเว็บ โดยมีความสนใจเป็นพิเศษในด้านการสร้างระบบเชิงโต้ตอบ",
-                p2: "ความสนใจด้านเกมและแอนิเมชันของผมเริ่มต้นตั้งแต่วัยเด็ก จากความอยากรู้เกี่ยวกับกระบวนการออกแบบและพัฒนาประสบการณ์เชิงโต้ตอบ นำไปสู่ประสบการณ์แรกในการพัฒนาเกมในช่วงมัธยมศึกษา และต่อมาได้ขยายความสนใจไปยังการพัฒนาเว็บ ซึ่งผมสนุกกับการสร้างแอปพลิเคชันที่มีประสิทธิภาพและสวยงาม",
-                p3: "ปัจจุบัน ผมเน้นการพัฒนาฟีเจอร์เกมใน Unity และสร้างเว็บแอปพลิเคชันสมัยใหม่โดยใช้เฟรมเวิร์กอย่าง Vue 3 และ Spring Boot ผมเรียนรู้ผ่านการทดลองและการพัฒนาอย่างต่อเนื่อง เพื่อเสริมสร้างความเข้าใจเชิงปฏิบัติในการพัฒนาระบบต่างๆ",
+                p1: "สวัสดีครับ ผมชื่อ ธิติวุฒิ ศรีอมรรัตน์ นักศึกษาวิทยาลัยการคอมพิวเตอร์ หลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น มีความสนใจในด้านการพัฒนาเกม โดยมีความสนใจเป็นพิเศษในด้านการสร้างระบบเชิงโต้ตอบ",
+                p2: "ความสนใจด้านเกมและแอนิเมชันของผมเริ่มต้นตั้งแต่วัยเด็ก จากความอยากรู้เกี่ยวกับกระบวนการออกแบบและพัฒนาประสบการณ์เชิงโต้ตอบ นำไปสู่ประสบการณ์แรกในการพัฒนาเกมในช่วงมัธยมศึกษา โดยใช้ Unity",
+                p3: "ปัจจุบัน ผมเน้นการพัฒนาฟีเจอร์เกมใน Unity และ Godot ผมเรียนรู้ผ่านการทดลองและการพัฒนาอย่างต่อเนื่อง เพื่อเสริมสร้างความเข้าใจเชิงปฏิบัติในการพัฒนาระบบต่างๆ",
                 certifications: "ใบรับรอง / เกียรติบัตร",
                 downloadCert: "ดาวน์โหลดใบรับรอง"
             },
@@ -253,31 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     b3: "Architecture: ใช้ Signal Pattern แยกการทำงานระหว่างระบบต่อสู้, UI และเสียง",
                     awardTitle: "โครงการที่ผ่านเข้ารอบชิงชนะเลิศ NSC 2025 (ได้รับทุนสนับสนุน)",
                     awardBadge: "ใบรับรองโครงการที่ผ่านเข้ารอบชิงชนะเลิศ NSC 2025"
-                },
-                tech2d: {
-                    b1: "Physics Controller: ระบบควบคุมตอบสนองฉับไว พร้อม Coyote Time และ Jump Buffering",
-                    b2: "Modular Logic: พารามิเตอร์อัตราเร่งที่ปรับจูนได้ เพื่อจำลองน้ำหนักและแรงเฉื่อย",
-                    b3: "Combat: ตรรกะปืนลูกซองที่มีการกระจายกระสุนแบบ Procedural และแยกระบบรับอินพุต"
-                },
-                tech3d: {
-                    b1: "Procedural Legs: คำนวณตำแหน่งวางเท้าที่เหมาะสมจากความเร็วและความสูงของพื้นที่",
-                    b2: "Grounding: ปรับองศาของลำตัวตามพื้นผิวที่ไม่เรียบด้วย Raycast",
-                    b3: "Math & Easing: ใช้ `Mathf.SmoothStep` คำนวณส่วนโค้งการก้าวเท้าให้ดูเป็นธรรมชาติ"
-                },
-                calendarx: {
-                    b1: "UI/UX Design: ออกแบบ UI และการทำงานของแอปฯ ผ่าน Figma",
-                    b2: "App Development: พัฒนาแอปพลิเคชันโดยใช้ Flutter",
-                    b3: "Tools: ใช้เครื่องมือ Visual Studio Code และ Android Studio ในการพัฒนา"
-                },
-                archery: {
-                    b1: "Management System: แก้ปัญหาการจัดเก็บข้อมูลที่ไม่เป็นระบบ และการสูญหายของข้อมูล",
-                    b2: "Equipment Tracking: จัดการฐานข้อมูลของการยืม-คืนอุปกรณ์",
-                    b3: "Progress Tracking: เก็บคะแนนและสถิติการซ้อมเพื่อให้ผู้ใช้งานสามารถติดตามและประเมินผลตนเองได้"
-                },
-                squader: {
-                    b1: "Swipe-to-Match: ค้นหาเพื่อนเล่นเกมที่มีความสนใจตรงกัน",
-                    b2: "Real-Time Chat: ระบบแชทแบบเรียลไทม์เพื่อสื่อสารได้ทันที",
-                    b3: "Tech Stack: พัฒนาด้วย Vue 3, Node.js และ PostgreSQL"
                 }
             },
             contact: {
@@ -297,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             if (text) element.textContent = text;
         });
+        const langToggle = document.getElementById('lang-toggle');
         if (langToggle) {
             langToggle.textContent = lang.toUpperCase();
         }
@@ -309,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (langToggle) {
         langToggle.addEventListener('click', () => {
-            const currentLang = langToggle.textContent.toLowerCase();
+            const currentLang = localStorage.getItem('lang') || 'en';
             const newLang = currentLang === 'en' ? 'th' : 'en';
             updateLanguage(newLang);
         });
@@ -320,18 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             if (downloadBtn.classList.contains('loading')) return;
-
-            // Show alert
             alert("Download started! It will take a while (84MB), please don't press it again.");
-
-            // Add loading class
             downloadBtn.classList.add('loading');
-
-            // Optional: Store original text if we wanted to revert, but for now we just disable.
-            // We can append "Downloading..." text or just let the spinner show.
-            // The spinner is added via CSS ::after, so text remains legible.
-
-            // Re-enable after 10 seconds just in case (optional, but good UX if download fails to start or is quick)
             setTimeout(() => {
                 downloadBtn.classList.remove('loading');
             }, 10000);
